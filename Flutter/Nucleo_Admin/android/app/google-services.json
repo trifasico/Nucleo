@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "489293272688",
+    "firebase_url": "https://appneeeicum.firebaseio.com",
+    "project_id": "appneeeicum",
+    "storage_bucket": "appneeeicum.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489293272688:android:98da243fbd332f87df06b5",
+        "android_client_info": {
+          "package_name": "com.NEEICUM.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489293272688-jr1vfmreuv307fdcn3hsoeeiukm43usm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIEdNDVySNfzS-4Tu6V6AoKQmec8I5zLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489293272688-jr1vfmreuv307fdcn3hsoeeiukm43usm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "489293272688-vvabdrsk82ib0o0sokaqajtctid6u2hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.NEEEICUMADMIN.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489293272688:android:2dac37d6f437dc9fdf06b5",
+        "android_client_info": {
+          "package_name": "com.NEEICUM.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489293272688-jr1vfmreuv307fdcn3hsoeeiukm43usm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIEdNDVySNfzS-4Tu6V6AoKQmec8I5zLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489293272688-jr1vfmreuv307fdcn3hsoeeiukm43usm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "489293272688-vvabdrsk82ib0o0sokaqajtctid6u2hm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.NEEEICUMADMIN.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

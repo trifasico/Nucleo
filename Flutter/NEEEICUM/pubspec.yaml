@@ -1,0 +1,53 @@
+name: NEEEICUM
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 21.3.8+17
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter_rounded_date_picker: ^1.0.5
+  flutter_localizations:
+    sdk: flutter
+  notification_permissions: ^0.4.8
+  flutter_cupertino_localizations: ^1.0.1
+  numberpicker: ^1.2.1
+  cloud_firestore: ^0.14.3
+  firebase_core: ^0.5.2
+  firebase_messaging: ^8.0.0-dev.8
+  shared_preferences: ^0.5.12+4
+  flutter_launcher_icons: ^0.8.1
+  qr_flutter: ^3.1.0
+  firestore_cache: ^0.2.0+1
+  flutter_staggered_grid_view: ^0.3.2
+  achievement_view: ^0.2.1
+  #internet_speed_test: ^1.1.2+1
+  youtube_player_flutter: ^7.0.0+7
+  url_launcher: ^6.0.2
+  flutter:
+    sdk: flutter
+    
+dependecies:
+  qr_flutter:
+    git:
+      url: git://github.com/lukef/qr.flutter.git
+
+  cupertino_icons: ^1.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/Icon.jpg"
+  #adaptive_icon_foreground: true

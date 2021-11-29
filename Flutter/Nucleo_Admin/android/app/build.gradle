@@ -1,0 +1,128 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+android {
+    compileSdkVersion 28
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.NEEICUM.admin"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+//	multiDexEnabled true
+    }
+
+//    signingConfigs {
+//        release {
+//            keyAlias keystoreProperties['keyAlias']
+//            keyPassword keystoreProperties['keyPassword']
+//            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+//            storePassword keystoreProperties['storePassword']
+//        }
+//    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            shrinkResources true
+            minifyEnabled true
+            //useProguard true
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //buildTypes {
+    //    release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            //signingConfig signingConfigs.debug
+
+           //signingConfig signingConfigs.debug
+    //       signingConfig signingConfigs.debug
+
+    //        minifyEnabled true
+    //        useProguard true
+
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+    //        dependencies {
+    //            implementation 'com.android.support:support-fragment:28.0.0'
+    //        }
+    //    }
+    //}
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+}
+apply plugin: 'com.android.application'
+// Add this line
+//classpath 'com.google.gms:google-services:4.3.3'
+
+apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //implementation 'com.android.support:multidex:1.0.3'     
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+    implementation 'androidx.multidex:multidex:2.0.1'
+  // add the Firebase SDK for Google Analytics
+  //implementation 'com.google.firebase:firebase-analytics:15.0.2'
+  //implementation 'com.google.firebase:firebase-core:15.0.2'
+  //implementation 'com.google.firebase:firebase-messaging:15.0.2'
+  //implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+  // add SDKs for any other desired Firebase products
+  // https://firebase.google.com/docs/android/setup#available-libraries
+}
+
+dependencies {
+  implementation 'com.android.support:multidex:1.0.1' //enter the latest version
+  //implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+}
+android {
+    defaultConfig {
+        multiDexEnabled true
+    }
+}
+
+
+// 9 17 25 29 43  estrelas 1 4

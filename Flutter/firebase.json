@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "WebHosting",
+    "site": "neeeicum",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
